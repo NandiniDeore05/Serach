@@ -1,3 +1,29 @@
+#include<iostream>
+using namespace std;
+void LinearSearch(int a[],int key,int n)
+{
+    cout<<"IT'S LINEAR SEARCH"<<endl;
+    int flag=0;
+    int i=0;
+    while(i<n)
+    {
+        if(a[i]==key)
+        {
+            flag=1;
+            break;
+        }
+        i++;
+    }
+    if(flag)
+    {
+        cout<<"THE ELEMENT FOUND AT "<<i+1<<" POSITION"<<endl;
+    }
+    else
+    {
+        cout<<"NOT FOUND"<<endl;
+    }    
+}
+
 int main()
 {
     int a[10],n,k;
