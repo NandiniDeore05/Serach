@@ -24,6 +24,29 @@ void LinearSearch(int a[],int key,int n)
     }    
 }
 
+void SentinelSearch(int a[],int key,int n)
+{
+    cout<<"IT'S SENTINEL SEARCH"<<endl;
+    a[n]=key;
+    int i=0;
+    while(i<=n)
+    {
+        if(a[i]==key)
+        {
+            break;
+        }
+        i++;
+    }
+    if(i==n)
+    {
+        cout<<"NOT FOUND"<<endl;
+    }
+    else
+    {
+        cout<<"THE ELEMENT IS FOUND AT "<<i+1<<" POSITION"<<endl;
+    }
+}
+
 int main()
 {
     int a[10],n,k;
