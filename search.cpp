@@ -47,6 +47,40 @@ void SentinelSearch(int a[],int key,int n)
     }
 }
 
+void BinarySearch(int a[],int key,int n)
+{
+    cout<<"IT'S BINARY SEARCH"<<endl;
+    int i,j,m;
+    i=0;
+    j=n-1;
+    int flag=0;
+    while(i<=j)
+    {
+        m=(i+j)/2;
+        if(a[m]==key)
+        {
+            flag=1;
+            break;
+        }
+        if(a[m]>key)
+        {
+            j=m-1;
+        }
+        else
+        {
+            i=m+1;
+        }
+    }
+    if(flag)
+    {
+        cout<<"THE ELEMENT IS FOUND AT "<<m+1<<" POSITION"<<endl;
+    }
+    else
+    {
+        cout<<"NOT FOUND"<<endl;
+    }
+}
+
 int main()
 {
     int a[10],n,k;
